@@ -9,3 +9,17 @@ localPropertiesFile.withReader("UTF-8") { reader -> properties.load(reader) }
 def flutterSdkPath = properties.getProperty("flutter.sdk")
 assert flutterSdkPath != null, "flutter.sdk not set in local.properties"
 apply from: "$flutterSdkPath/packages/flutter_tools/gradle/app_plugin_loader.gradle"
+
+includeBuild("$flutterSdkPath/packages/flutter_tools/gradle")
+
+repositories {
+    google()
+    mavenCentral()
+    gradlePluginPortal()
+}
+
+plugins {
+    id "dev.flutter.flutter-plugin-loader" version "1.0.0"
+    id "com.android.application" version "{agpVersion}" apply "7.2.0"
+    id "org.jetbrains.kotlin.android" version "{kotlinVersion}" apply "1.7.20"
+}
