@@ -68,7 +68,7 @@ class _SplashPageState extends State<SplashPage> with CustomModalSheetMixin {
         showCustomModalBottomSheet(
           context: context,
           content: (state as SyncStateError).message,
-          buttonText: 'Go to login',
+          buttonText: 'Ir para o login',
           isDismissible: false,
           onPressed: () => Navigator.pushNamedAndRemoveUntil(
             context,
@@ -96,7 +96,7 @@ class _SplashPageState extends State<SplashPage> with CustomModalSheetMixin {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'financy',
+              'financeiro',
               style: AppTextStyles.bigText50.copyWith(color: AppColors.white),
             ),
             Text(
