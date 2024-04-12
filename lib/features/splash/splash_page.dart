@@ -100,7 +100,7 @@ class _SplashPageState extends State<SplashPage> with CustomModalSheetMixin {
               style: AppTextStyles.bigText50.copyWith(color: AppColors.white),
             ),
             Text(
-              'Syncing data...',
+              'Sincronizando dados...',
               style: AppTextStyles.smallText13.copyWith(color: AppColors.white),
             ),
             const SizedBox(height: 16.0),

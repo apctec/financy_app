@@ -61,7 +61,7 @@ class _SignUpPageState extends State<SignUpPage> with CustomModalSheetMixin {
         showCustomModalBottomSheet(
           context: context,
           content: (state as SignUpStateError).message,
-          buttonText: "Try again",
+          buttonText: "Tente novamente",
         );
         break;
     }
@@ -86,7 +86,7 @@ class _SignUpPageState extends State<SignUpPage> with CustomModalSheetMixin {
         showCustomModalBottomSheet(
           context: context,
           content: (_syncController.state as SyncStateError).message,
-          buttonText: "Try again",
+          buttonText: "Tente novamente",
           onPressed: () => Navigator.pushNamedAndRemoveUntil(
             context,
             NamedRoute.signUp,
@@ -118,14 +118,14 @@ class _SignUpPageState extends State<SignUpPage> with CustomModalSheetMixin {
         key: Keys.signUpListView,
         children: [
           Text(
-            'Spend Smarter',
+            'Gaste de maneira mais inteligente',
             textAlign: TextAlign.center,
             style: AppTextStyles.mediumText36.copyWith(
               color: AppColors.greenOne,
             ),
           ),
           Text(
-            'Save More',
+            'Poupe mais',
             textAlign: TextAlign.center,
             style: AppTextStyles.mediumText36.copyWith(
               color: AppColors.greenOne,
@@ -141,7 +141,7 @@ class _SignUpPageState extends State<SignUpPage> with CustomModalSheetMixin {
                 CustomTextFormField(
                   key: Keys.signUpNameField,
                   controller: _nameController,
-                  labelText: "your name",
+                  labelText: "seu nome",
                   hintText: "JOHN DOE",
                   inputFormatters: [
                     UpperCaseTextInputFormatter(),
@@ -151,22 +151,22 @@ class _SignUpPageState extends State<SignUpPage> with CustomModalSheetMixin {
                 CustomTextFormField(
                   key: Keys.signUpEmailField,
                   controller: _emailController,
-                  labelText: "your email",
+                  labelText: "seu e-mail",
                   hintText: "john@email.com",
                   validator: Validator.validateEmail,
                 ),
                 PasswordFormField(
                   key: Keys.signUpPasswordField,
                   controller: _passwordController,
-                  labelText: "choose your password",
+                  labelText: "escolha sua senha",
                   hintText: "*********",
                   validator: Validator.validatePassword,
                   helperText:
-                      "Must have at least 8 characters, 1 capital letter and 1 number.",
+                      "Deve ter pelo menos 8 caracteres, 1 letra maiúscula e 1 número.",
                 ),
                 PasswordFormField(
                   key: Keys.signUpConfirmPasswordField,
-                  labelText: "confirm your password",
+                  labelText: "confirme sua senha",
                   hintText: "*********",
                   validator: (value) => Validator.validateConfirmPassword(
                     _passwordController.text,
@@ -181,9 +181,9 @@ class _SignUpPageState extends State<SignUpPage> with CustomModalSheetMixin {
             padding: const EdgeInsets.symmetric(horizontal: 32.0),
             child: Text.rich(
               TextSpan(children: [
-                const TextSpan(text: 'By signing up you comply with our '),
+                const TextSpan(text: 'Ao se inscrever você cconcorda com nosso '),
                 TextSpan(
-                  text: 'Agreements',
+                  text: 'Contrato',
                   style: AppTextStyles.smallText13.copyWith(
                     color: AppColors.darkGrey,
                   ),
@@ -214,7 +214,7 @@ class _SignUpPageState extends State<SignUpPage> with CustomModalSheetMixin {
             ),
             child: PrimaryButton(
               key: Keys.signUpButton,
-              text: 'Sign Up',
+              text: 'Inscrever-se',
               onPressed: _onSignUpButtonPressed,
             ),
           ),
@@ -226,13 +226,13 @@ class _SignUpPageState extends State<SignUpPage> with CustomModalSheetMixin {
             ),
             children: [
               Text(
-                'Already have account? ',
+                'Já tenho uma conta? ',
                 style: AppTextStyles.smallText.copyWith(
                   color: AppColors.grey,
                 ),
               ),
               Text(
-                'Sign In ',
+                'Entrar ',
                 style: AppTextStyles.smallText.copyWith(
                   color: AppColors.greenOne,
                 ),

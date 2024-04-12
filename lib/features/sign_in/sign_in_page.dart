@@ -56,7 +56,7 @@ class _SignInPageState extends State<SignInPage> with CustomModalSheetMixin {
         showCustomModalBottomSheet(
           context: context,
           content: (_signInController.state as SignInStateError).message,
-          buttonText: "Try again",
+          buttonText: "Tente novamente",
         );
         break;
     }
@@ -81,7 +81,7 @@ class _SignInPageState extends State<SignInPage> with CustomModalSheetMixin {
         showCustomModalBottomSheet(
           context: context,
           content: (_syncController.state as SyncStateError).message,
-          buttonText: "Try again",
+          buttonText: "Tente novamente",
           onPressed: () => Navigator.pushNamedAndRemoveUntil(
             context,
             NamedRoute.signIn,
@@ -112,7 +112,7 @@ class _SignInPageState extends State<SignInPage> with CustomModalSheetMixin {
         key: Keys.signInListView,
         children: [
           Text(
-            'Welcome Back!',
+            'Bem vindo de volta!',
             textAlign: TextAlign.center,
             style: AppTextStyles.mediumText36.copyWith(
               color: AppColors.greenOne,
@@ -128,14 +128,14 @@ class _SignInPageState extends State<SignInPage> with CustomModalSheetMixin {
                 CustomTextFormField(
                   key: Keys.signInEmailField,
                   controller: _emailController,
-                  labelText: "your email",
+                  labelText: "seu e-mail",
                   hintText: "john@email.com",
                   validator: Validator.validateEmail,
                 ),
                 PasswordFormField(
                   key: Keys.signInPasswordField,
                   controller: _passwordController,
-                  labelText: "your password",
+                  labelText: "sua senha",
                   hintText: "*********",
                   validator: Validator.validatePassword,
                   onEditingComplete: _onSignInButtonPressed,
@@ -149,7 +149,7 @@ class _SignInPageState extends State<SignInPage> with CustomModalSheetMixin {
               context,
               NamedRoute.forgotPassword,
             ),
-            child: const Text('Forgot Password?'),
+            child: const Text('Esqueceu a senha?'),
           ),
           Padding(
             padding: const EdgeInsets.only(
@@ -160,7 +160,7 @@ class _SignInPageState extends State<SignInPage> with CustomModalSheetMixin {
             ),
             child: PrimaryButton(
               key: Keys.signInButton,
-              text: 'Sign In',
+              text: 'Entrar',
               onPressed: _onSignInButtonPressed,
             ),
           ),
@@ -172,13 +172,13 @@ class _SignInPageState extends State<SignInPage> with CustomModalSheetMixin {
             ),
             children: [
               Text(
-                'Don\'t have account? ',
+                'Não tem uma conta? ',
                 style: AppTextStyles.smallText.copyWith(
                   color: AppColors.grey,
                 ),
               ),
               Text(
-                'Sign Up',
+                'Inscrever-se',
                 style: AppTextStyles.smallText.copyWith(
                   color: AppColors.greenOne,
                 ),

@@ -19,14 +19,14 @@ class OnboardingPage extends StatelessWidget {
             ),
           ),
           Text(
-            'Spend Smarter',
+            'Gaste de maneira mais inteligente',
             textAlign: TextAlign.center,
             style: AppTextStyles.mediumText36.copyWith(
               color: AppColors.greenOne,
             ),
           ),
           Text(
-            'Save More',
+            'Poupe mais',
             textAlign: TextAlign.center,
             style: AppTextStyles.mediumText36.copyWith(
               color: AppColors.greenOne,
@@ -41,7 +41,7 @@ class OnboardingPage extends StatelessWidget {
             ),
             child: PrimaryButton(
               key: Keys.onboardingGetStartedButton,
-              text: 'Get Started',
+              text: 'Iniciar',
               onPressed: () {
                 Navigator.pushNamed(
                   context,
@@ -55,13 +55,13 @@ class OnboardingPage extends StatelessWidget {
             onPressed: () => Navigator.pushNamed(context, NamedRoute.signIn),
             children: [
               Text(
-                'Already have account? ',
+                'Já tem uma conta? ',
                 style: AppTextStyles.smallText.copyWith(
                   color: AppColors.grey,
                 ),
               ),
               Text(
-                'Sign In ',
+                'Entrar ',
                 style: AppTextStyles.smallText.copyWith(
                   color: AppColors.greenOne,
                 ),

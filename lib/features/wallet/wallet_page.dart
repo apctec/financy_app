@@ -100,7 +100,7 @@ class _WalletPageState extends State<WalletPage>
       child: Stack(
         children: [
           AppHeader(
-            title: 'Wallet',
+            title: 'Carteira',
             onPressed: () {
               locator
                   .get<HomeController>()
